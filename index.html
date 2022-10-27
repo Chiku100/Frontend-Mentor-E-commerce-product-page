@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <title>Frontend Mentor | E-commerce product page</title>
+</head>
+<div class="overlay viz">
+  <div></div>
+</div>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="resnav viz">
+        <button type="button navclose"><i class="fa-solid fa-xmark"></i></button>
+        <div class="dropdown">
+          <a href="#">Collections</a>
+          <a href="#">Men</a>
+          <a href="#">Women</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      <div class="collections">
+        <div class="logo">
+          <i class="fa-sharp viz fa-solid fa-bars"></i>
+          <img src="./images/logo.svg" alt="logo">
+        </div>
+        <a href="#">Collections</a>
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="profile">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <div class="parent">
+          <div class="circle"></div>
+        </div>
+        <img src="./images/image-avatar.png" alt="image-avatar">
+      </div>
+    </nav>
+    <div class="abs  try viz">
+      <div class="cart a">
+        <p>Cart</p>
+        <hr>
+        <div class="qw">
+          <span>Your cart is empty.</span>
+        </div>
+      </div>
+    </div>
+    <div class="abs1 try viz">
+      <div class="cart1 a">
+        <p>Cart</p>
+        <hr>
+        <div>
+          <img class="cartimg" src="./images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail">
+          <div class="abstract">
+            <p>Fall Limited Edition Sneakers</p>
+            <p>$125.00 x <small class="amount"> 3</small> <span class="total">$375.00</span></p>
+          </div>
+          <img class="dlt" src="./images/icon-delete.svg" alt="icon-delete">
+        </div>
+        <div>
+          <button class="checkout" type="button">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="leftbox inactive">
+      <!-- <picture>
+        <!-- <source media="(max-width:1201px)" srcset="./images/image-product-1.jpg"> -->
+      <!-- <img class="inactiveimg" src="./images/image-product-1.jpg" alt="image-product-1"> -->
+      <!-- </picture> --> 
+      <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+
+          <img src="./images/image-product-1.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="./images/image-product-2.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="./images/image-product-3.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="./images/image-product-4.jpg" style="width:100%">
+        </div>
+        <!-- Next and previous buttons -->
+        <a class="previous viz" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next viz" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      <div class="thumbnails">
+
+        <img class="product1" onclick="currentSlide(1);addBorder(this)" src="./images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail">
+        <img class="product2" onclick="currentSlide(2);addBorder(this)" src="./images/image-product-2-thumbnail.jpg" alt="image-product-2-thumbnail">
+        <img class="product3" onclick="currentSlide(3);addBorder(this)" src="./images/image-product-3-thumbnail.jpg" alt="image-product-3-thumbnail">
+        <img class="product4" onclick="currentSlide(4);addBorder(this)" src="./images/image-product-4-thumbnail.jpg" alt="image-product-4-thumbnail">
+      </div>
+    </div>
+    <div class="leftbox active viz">
+      
+
+      <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <i class="fa-solid close fa-xmark"></i>
+      <!-- <picture>
+        <source media="(max-width:451px)" srcset="./images/image-product-1.jpg">
+        <img class="activeimg" src="./images/image-product-1.jpg" alt="image-product-1">
+      </picture> -->
+      <div class="slideshow-container-act">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlidesact fade">
+
+          <img src="./images/image-product-1.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlidesact fade">
+          <img src="./images/image-product-2.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlidesact fade">
+          <img src="./images/image-product-3.jpg" style="width:100%">
+        </div>
+        <div class="mySlidesact fade">
+          <img src="./images/image-product-4.jpg" style="width:100%">
+        </div>
+        <!-- Next and previous buttons -->
+        <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <div class="thumbnails">
+
+        <img class="active_product1 product1 notactive"  onclick="currentSlide(1);addBorder(this)" onclick="addBorder(this)" src="./images/image-product-1-thumbnail.jpg"
+          alt="image-product-1-thumbnail">
+        <img class="active_product2 product2 notactive"  onclick="currentSlide(2);addBorder(this)" src="./images/image-product-2-thumbnail.jpg"
+          alt="image-product-2-thumbnail">
+        <img class="active_product3 product3 notactive"  onclick="currentSlide(3);addBorder(this)" src="./images/image-product-3-thumbnail.jpg"
+          alt="image-product-3-thumbnail">
+        <img class="active_product4 product4 notactive"  onclick="currentSlide(4);addBorder(this)" src="./images/image-product-4-thumbnail.jpg"
+          alt="image-product-4-thumbnail">
+      </div>
+    </div>
+    <div class="rightbox">
+      <p>Sneaker Company</p>
+      <h1>Fall Limited Edition Sneakers</h1>
+      <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole,
+        they’ll withstand everything the weather can offer.</p>
+      <div class="exec">
+        <div class="price">
+          <b>$125.00</b>
+          <span>50%</span>
+        </div>
+        <small>$250.00</small>
+      </div>
+      <div class="za">
+        <div class="scroller">
+          <button class="minus" type="button"><img src="./images/icon-minus.svg" alt="icon-minus"></button>
+          <b class="num">0</b>
+          <button class="plus" type="button"><img src="./images/icon-plus.svg" alt="plus"></button>
+        </div>
+        <button class="button" type="button">
+          <i class="fa-solid fa-cart-shopping"></i>Add to cart</button>
+      </div>
+    </div>
+  </main>
+  <script src="./index.js"></script>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+
+</html>
