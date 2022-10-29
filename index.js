@@ -1,8 +1,4 @@
 let cart = document.querySelector(".fa-cart-shopping");
-// cart.addEventListener("click", () => {
-//     document.querySelector(".try").classList.toggle("viz")
-//     document.querySelector(".a").classList.toggle("viz")
-// })
 
 function add() {
     document.querySelector(".abs1").classList.add("viz");
@@ -23,17 +19,13 @@ var count = 0;
 if (count == 0) {
     console.log(count);
     cart.addEventListener("click", () => {
-        console.log("this");
         add();
-        // document.querySelector(".amount").innerHTML = 0;
     })
 }
 document.querySelector(".plus").addEventListener("click", () => {
     count++;
     document.querySelector(".num").innerHTML = count;
-    console.log(count);
     if (count == 0) {
-        console.log(count);
         cart.addEventListener("click", () => {
             add();
         })
@@ -69,7 +61,6 @@ document.querySelector(".minus").addEventListener("click", () => {
 
 document.querySelector(".num").innerHTML = 0;
 cart.addEventListener("click", () => {
-    // console.log(cart_count);
     document.querySelector(".abs").classList.remove("viz")
     document.querySelector(".abs1").classList.remove("viz");
 })
@@ -99,38 +90,36 @@ let num = 1;
 
 let slideIndex = 1;
 showSlides(slideIndex);
-// Next/previous controls
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
-
-function getAllSiblings(element, parent) {
-    const children = [...parent.children];
-    return children.filter(child => child !== element);
-}
 function addBorder(id) {
-    for(i = 0; i < thumbnails.length; i++)
-    {
+    for (i = 0; i < thumbnails.length; i++) {
         thumbnails[i].style.border = 'none';
         thumbnails[i].style.opacity = '1';
+        thumbnails[i].filter="brightness(0.5)"
     }
     id.style.border = '2px solid orange';
     id.style.opacity = "0.6";
-  }
+    id.style.filter="brightness(1.2)";
+}
+function inactiveborder(id) {
+    let inactives = document.querySelectorAll(".inactivethumbs img")
+    for (i = 0; i < inactives.length; i++) {
+        inactives[i].style.border = 'none';
+        inactives[i].style.opacity = '1';
+    }
+    id.style.border = '2px solid orange';
+    id.style.opacity = "0.6";
+    id.style.brightness="20%";
+}
 function currentSlide(n) {
     showSlides(slideIndex = n);
-    // console.log(getAllSiblings(this,document.querySelector(".thumbnails")));
-    getAllSiblings(thumbnails[n-1],document.querySelector(".thumbnails"))
-    // thumbnails[n - 1].className=thumbnails[n - 1].className.replace("notactive","outline")
-    // mark(thumbnails[n-1])
-    // console.log(mark(thumbnails[n-1]));
 }
 function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("mySlides");
     let slidesact = document.getElementsByClassName("mySlidesact")
-    // console.log(slides);
-    let dots = document.getElementsByClassName("dot");
     if (n > slides.length) { slideIndex = 1 }
     if (n < 1) { slideIndex = slides.length }
     for (i = 0; i < slides.length; i++) {
@@ -141,15 +130,10 @@ function showSlides(n) {
     for (i = 0; i < slidesact.length; i++) {
         slidesact[i].style.display = "none";
     }
-    // for (i = 0; i < thumbnails.length; i++) {
-    //   thumbnails[i].style.opacity="0.4";
-    //   thumbnails[i].style.border="2px red solid";
-    // }
+    addBorder(thumbnails[slideIndex-1])
     slides[slideIndex - 1].style.display = "block";
     slidesact[slideIndex - 1].style.display = "block";
-    // thumbnails[i].style.border="2px red solid";
 
-    // dots[slideIndex-1].className += " active";
 }
 document.querySelector(".dlt").addEventListener("click", () => {
     document.querySelector(".abs1").classList.add("viz");
