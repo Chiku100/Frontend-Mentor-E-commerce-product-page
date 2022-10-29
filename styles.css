@@ -17,11 +17,8 @@
     margin: 0;
 }
 
-
-
 body {
     min-height: 100vh;
-    /* padding: 2rem 8rem; */
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 1rem;
     min-height: 100vh;
@@ -31,7 +28,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
 }
 
 img,
@@ -59,8 +55,8 @@ h1 {
 }
 
 header {
+    transition: all 0.2s;
     padding: 2rem 8rem 0 8rem;
-
     margin-bottom: 2rem;
     border-bottom: 1px solid var(--Grayish_blue);
 }
@@ -91,14 +87,17 @@ main {
 .logo {
     height: 100%;
 }
-.notactive{
+
+.notactive {
     outline: none;
     opacity: 1;
 }
-.outline{
+
+.outline {
     outline: 3px solid var(--Orange);
     opacity: 0.7;
 }
+
 .collections {
     height: 100%;
     width: 60%;
@@ -169,6 +168,7 @@ h1 {
 }
 
 .leftbox {
+    transition: all 0.5s ease-out;
     width: 40%;
     position: relative;
     overflow: hidden;
@@ -242,7 +242,6 @@ h1 {
     justify-content: center;
     align-items: center;
     display: flex;
-    /* padding: 1rem 8rem; */
     width: 60%;
     background-color: var(--Orange);
     color: var(--White);
@@ -251,14 +250,12 @@ h1 {
 
 i {
     color: var(--White);
-
     display: inline;
 }
 
 .thumbnails img {
     width: 20%;
     border-radius: 10px;
-    /* outline: var(--Orange); */
     cursor: pointer;
 }
 
@@ -272,7 +269,6 @@ hr {
 
 .leftbox picture img {
     width: 90%;
-    /* height: 90%; */
 }
 
 .abs,
@@ -288,7 +284,6 @@ hr {
     box-shadow: 1px 1px 5px 5px #b7b7b7;
     position: absolute;
     left: 80%;
-
     width: 18rem;
     height: 12rem;
     background-color: white;
@@ -324,12 +319,6 @@ a:hover:not(.previous, .next) {
 a {
     height: 100%;
 }
-
-/* .product1 {
-    opacity: 0.6;
-    padding: 0;
-    border: 2px var(--Orange) solid;
-} */
 
 .thumbnails img:hover {
     opacity: 0.6;
@@ -405,8 +394,6 @@ a {
     width: 100%;
     color: var(--White);
     border-radius: 10px;
-    /* height: 2rem; */
-
 }
 
 .abstract {
@@ -427,6 +414,12 @@ a {
 
 .slideshow-container-act {
     width: 100%;
+    transition: 0.5s;
+
+}
+
+.mySlidesact {
+    transition: 0.5s;
 }
 
 .slideshow-container-act.previous {
@@ -436,7 +429,6 @@ a {
 .close {
     cursor: pointer;
     font-size: 1rem;
-    /* color: var(--Orange); */
     position: absolute;
     right: 1rem;
     top: -0;
@@ -459,6 +451,7 @@ a {
 }
 
 .active {
+    transition: all 0.5s ease-out;
     position: relative;
     gap: 1rem;
     bottom: 5rem;
@@ -474,7 +467,6 @@ a {
     top: 35%;
     left: 0;
     z-index: 111;
-    /* display: flex; */
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -488,7 +480,6 @@ a {
     width: 2rem;
     height: 2rem;
     z-index: 1;
-    /* display: flex; */
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -549,17 +540,12 @@ a {
         padding: 0;
         margin: 0;
         width: 100%;
-        /* align-items: center; */
-        /* display: flex; */
         flex-direction: column;
         padding-top: 0;
-        /* justify-content: space-around; */
     }
 
     .thumbnails {
-        /* display: flex; */
         width: 100%;
-        /* justify-content: space-between; */
     }
 
     .rightbox {
@@ -706,7 +692,6 @@ a {
         padding: 2rem;
         z-index: 1;
         display: none;
-        /* display: flex; */
         flex-direction: column;
         background-color: var(--White);
         color: black;
